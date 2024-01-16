@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario  con HTML5 Y CSS3</title>
+    <link rel="stylesheet" href="css/estilos_formulario.css">
+</head>
+<body>
+    
+    
+    <div class="contenedor">
+        <label for="titulo" class="titulo">Registro de Usuarios</label> 
+        <form action="alta_usuario.php"  class="formulario" name="formulario" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Escribe tu nombre" required>
+            <span class="error-message" id="nombreError">Nombre no Valido, solo puede contener letras, iniciando con cun letra mayúscula y debe tener una longitud mínima de 3.</span>
+            
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" name="apellidos" id="apellidos" class="form-control" placeholder="Escribe tus apellidos" required>
+            <span class="error-message" id="apellidosError">Apellidos no válidos, debe iniciar con una letra mayúscula despúes letras minúsculas, seguido un espacio, despúes otra letra mayúscula y más letras minúsculas.</span>
+            
+            <label for="genero">Seleccione su género:</label>
+            <div class="radio">
+                <input type="radio" name="genero" value="M" id="H" required>
+                <label for="H" id="mas">Masculino</label>
+                <input type="radio" name="genero" value="F" id="M">
+                <label for="M" id="fem">Femenino</label>
+                
+            </div>
+            
+            <span class="error-message" id="generoError">Seleccione un género</span>
+            
+            <label for="domicilio">Domicilio</label>
+            <input type="text" name="domicilio" id="domicilio" class="form-control"  placeholder="Escribe el nombre de usuario" required>
+            <span class="error-message" id="usuarioError">Usuario no válido, puede contener letras, números, guion, y guion bajo y debe contener una longitud mínima de 4.</span>
+             
+            <label for="usuario">Usuario</label>
+            <input type="text" name="usuario" id="usuario" placeholder="Escribe el nombre de usuario" class="form-control" required>
+            <span class="error-message" id="usuarioError">Usuario no válido. Puede contener letras, numeros, guion y guion bajo y debe de contener un caracter mínimo de 4. </span>
+
+            <label for="pwd">Contraseña:</label>
+            <input type="password" name="pwd" id="pwd" placeholder="Escribe una contraseña" class="form-control"  required>
+            <span class="error-message" id="contrasenaError">Contraseña no válida. Puede contener cualquier caracter, pero debe contener una letra minúscula como mínimo, una letra mayúscula como mínimo y debe de contener como mínimo 8 caracteres.</span>
+
+            <div class="checkbox">
+                <input type="checkbox" name="checkbox" id="checkbox" class="form-control"  required>
+                <label for="checkbox">Acepto terminos y condiciones</label>
+                <span class="error-message" id="terminosError">Acepta los términos y condiciones.</span>
+            </div>
+            
+            <div class="btn-group">
+                <input type="reset" value="Cancelar" class="cancelar">
+        
+                <input type="submit" value="Registrar" class="guardar"> 
+                
+            </div>
+        </form>
+    </div>
+    <script src="js/instrucciones.js"></script>
+
+<?ph
+    
+</body>
+</html>
